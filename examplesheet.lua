@@ -1,77 +1,11 @@
+-- Sheet for Rondo Alla Turca by Wolfgang Amadeus Mozart
+
 shared.stop = true -- stops the player at any time if true
 -- CONFIG:
-shared.ftime = nil -- time in seconds for the song to finish (extended by |)
+shared.ftime = 9*60 + 25 -- time in seconds for the song to finish (extended by |)
 shared.delay = nil -- delay overides the ftime
-shared.tempo = 65 -- delay overides the delay
+shared.tempo = nil -- delay overides the delay
 
 shared.scr = [[
-[60et] e t e t e t
-[Q29e] t y
-[60et] t e t e t y t y
-[Q29t] u [3wtu]
-[4qet] e e t t u [30tuo] s
-[29ety] u y t y e w [et] w
-[7ryio] [yio] [7i] y r o i y
-[7ryoa] [yoa] [7ra] o y d [5w]
-[60et] e t e t e t e
-[Q29t] y y u
-[60et] e t e t y y
-[Q29t] [3wtu]
-[4qet] e t u o [30wtu] s
-[29et] u y t u y u
-[7ryio] [9ryio]
-[qryio] [wryio]
-[80wt] w w t t u u [wti] u y u t
-[4qe] e t y i u t t y u t
-[80w] w t y i u y t y u t
-[4qtip] s y t y t [80w] t e
-[Q29eu] y [ty] u y [30wru]
-[4qeti] u i u i u i u i u [tuo]
-8 u t [8tio] [8tuo]
-[4qeti] e t [eti] [eti] [4q] [eto] [eto] [eti]
-[80wt] w w t t u u [wti] u y u t
-[4qe] e t y i u t t y u t
-[80w] w t y i u y t y u t
-[4qtip] s y t y t [80w] t e
-[Q29eu] y [ty] u y [30wru]
-[4qeti] u i u i u i u i u [tuo]
-8 u t [8tio] [8tuo]
-[4qeti] e t [eti] [eti] [4q] [eto] [eto] [eti]
-[60et] e [6t] e t 6 e t 6 e
-[Q29et] y y [29] u [29] [29]
-[60et] 6 e t 6 e t 6 y [ty]
-[Q29ety] [29] [29] [29] [30wrt]
-[4et] e e [4t] u o [30tu] s [30] u y t
-[29] [ety] [29] [29] [29u] t y
-[7yio] [7yio] [7i] y r o 7 i y
-[7yoa] [7yoa] [7ra] o y d [5w]
-[60et] e t 6 e t e 6 6 u t t
-[Q29ey] y [29] [29] [29]
-[60et] e t [6t] e t 6 e [6t] y y
-[Q29et] [29] [29] e [29t] [30wtu]
-[4qetip] [4q] [30tuo] [30] s
-[29etu] u y t [29] [29] e [29u] t y
-[7ryio] [9ryio]
-[qryio] [wryio]
-[80wt] w w t t u [8u] [wti] u y 8 u t
-[4qe] e t y [4eti] u t t [4y] u t
-[80w] w t y [8wti] u y t [8y] u t
-[4tip] s y t y [4t] [30w] t [3e]
-[Q2eu] y [ty] u y [Q2ey] [30wru]
-[4eti] u i u [4eti] u i u [4i] u [tuo]
-8 u t 8 [tio] 8 [tuo]
-[4qeti] e t [eti] [qeti] [eto] [eto] [4q] [eti]
-[80wt] w w t t u [8u] [wti] u y 8 u t
-[4qe] e t y [4eti] u t t [4y] u t
-[80w] w t y [8wti] u y t [8y] u t
-[4tip] s y t y [4t] [30w] t [3e]
-[Q2eu] y [ty] u y 2 [30wru]
-[4eti] u i u [4eti] u i u [4i] u [tuo]
-8 u t 8 [tio] 8 [tuo]
-[4qet] e [4t] [eti] u i u [4i] u [tuo]
-8 u t 8 [tio] 8 [tuo]
-[4eti] e t i u i u i u o
-8 u t [tio] [tuo]
-[qips] p s g f g f g f s [fh]
-t f s
+a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [el] [tu] [tuj] [tul] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [7fh] [rDG] [0f] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [el] [tu] [tuj] [tul] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [7fh] [rDG] [0f] [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] o [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] u [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [ql] [eY] [Yej] [Yek] [0l] [euk] [9j] [qrH] [8j] [0ef] [9g] [qrd] [0es] [0e] [W0s] a s a [W0s] a p a [6ep] [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] o [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] u [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [ql] [eY] [Yej] [Yek] [0l] [euk] [9j] [qrH] [8j] [0ef] [9g] [qrd] [0es] [0e] [W0s] a s a [W0s] a p a [6ep] [pj] [ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9OH] [@pj] $ 6 ( [(ak] [3OH] % 7 0 [0uf] [0pj] [0ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9ak] [3OH] % 7 0 [0uf] [6pj] [pj] [ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9OH] [@pj] $ 6 ( [(ak] [3OH] % 7 0 [0uf] [0pj] [0ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9ak] [3OH] % 7 0 [0uf] [6pj] L z L k [Qj] k [Tej] H [eTG] j [eTH] G [Wg] G [rTH] g [rTS] D [Trg] S [QG] g [eTG] H [Tej] H [Tej] k [qL] l [WTL] l [WTL] z [WTL] k [Qj] k [Tej] H [eTG] j [eTH] G [Wf] G [uTH] f [uTS] D [Tuf] S [WD] f [YIG] D [YIs] S [YID] s [uTS] L z L k [Qj] k [Tej] H [eTG] j [eTH] G [Wg] G [rTH] g [rTS] D [Trg] S [QG] g [eTG] H [Tej] H [Tej] k [qL] l [WTL] l [WTL] z [WTL] k [Qj] k [Tej] H [eTG] j [eTH] G [Wf] G [uTH] f [uTS] D [Tuf] S [WD] f [YIG] D [YIs] S [YID] s [uTS] f d S a [ep] a [uTS] d [Tuf] G [uTH] j [rj] H [yuG] f [Wf] d [yuS] a [ep] a [uTS] d [Tuf] G [uTH] j [0J] [Wyk] [Wyf] d [yWS] a [ep] a [uTS] d [Tuf] G [uTH] j [rj] H [yuG] f [Wf] d [yuS] a [eS] f [Qp] S [9a] d [0O] a [6p] e L z L k [Qj] k [Tej] H [eTG] j [eTH] G [Wg] G [rTH] g [rTS] D [Trg] S [QG] g [eTG] H [Tej] H [Tej] k [L] l [WTL] l [wTL] l [QTL] J [7z] L [Qrz] L [Qrz] L [Qrz] L [7z] L [Wrk] j [rWH] j [Wrk] H [j] k [eQL] G [g] G [rWH] g [eQG] f d S a [ep] a [uTS] d [Tuf] G [uTH] j [rj] H [yuG] f [Wf] d [yuS] a [ep] a [uTS] d [Tuf] G [uTH] j [0J] [Wyk] [Wyf] d [yWS] a [ep] a [uTS] d [Tuf] G [uTH] j [rj] H [yuG] f [Wf] d [yuS] a [eS] f [Qp] S [9a] d [0O] a [6p] e L z L k [Qj] k [Tej] H [eTG] j [eTH] G [Wg] G [rTH] g [rTS] D [Trg] S [QG] g [eTG] H [Tej] H [Tej] k [L] l [WTL] l [wTL] l [QTL] J [7z] L [Qrz] L [Qrz] L [Qrz] L [7z] L [Wrk] j [rWH] j [Wrk] H [j] k [eQL] G [g] G [rWH] g [eQG] [pj] [ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9OH] [@pj] $ 6 ( [(ak] [3OH] % 7 0 [0uf] [0pj] [0ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9ak] [3OH] % 7 0 [0uf] [6pj] [pj] [ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9OH] [@pj] $ 6 ( [(ak] [3OH] % 7 0 [0uf] [0pj] [0ak] [6SL] * 0 e e [epj] [eak] [6SL] * 0 e [eak] [epj] [eOH] [2IG] $ 6 9 [9ak] [3OH] % 7 0 [0uf] [6pj] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [el] [tu] [tuj] [tul] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [7fh] [rDG] [0f] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [el] [tu] [tuj] [tul] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [rufh] [Gruj] [0h] j k [Gruj] [7fh] [rDG] [0f] [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] o [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] u [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [ql] [eY] [Yej] [Yek] [0l] [euk] [9j] [qrH] [8j] [0ef] [9g] [qrd] [0es] [0e] [W0s] a s a [W0s] a p a [6ep] [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] o [sf] [dg] [8fh] [tfh] [0j] h [ug] f [wad] [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] u [ps] [ad] [6sf] [esf] [8g] f [td] s [O0a] a p O p [es] [tu] [tud] s [tua] s [ef] [tu] [tug] f [tuD] f [ek] j [tuH] j [ek] j [tuH] j [ql] [eY] [Yej] [Yek] [0l] [euk] [9j] [qrH] [8j] [0ef] [9g] [qrd] [0es] [0e] [W0s] a s a [W0s] a p a [6ep] p j a k [6S] * 0 [eL] e [ep] j [ea] k [6S] * 0 [eL] [ea] k [ep] j [eO] H [2I] $ 6 [9G] [9O] H [@p] $ 6 [(j] [(a] k [3O] % 7 [0H] [0u] f [0p] j [0a] k [6S] * 0 [eL] e [ep] j [ea] k [6S] * 0 [eL] [ea] k [ep] j [eO] H [2I] $ 6 [9G] [9a] k [3O] % 7 [0H] [0u] f [6pj] p j a k [6S] * 0 [eL] e [ep] j [ea] k [6S] * 0 [eL] [ea] k [ep] j [eO] H [2I] $ 6 [9G] [9O] H [@p] $ 6 [(j] [(a] k [3O] % 7 [0H] [0u] f [0p] j [0a] k [6S] * 0 [eL] e [ep] j [ea] k [6S] * 0 [eL] [ea] k [ep] j [eO] H [2I] $ 6 [9G] [9a] k [3O] % 7 [0H] [0u] f [6pj] * 0 e e [eSL] e L [6S] f * j 0 L e e e e [6S] f * j 0 L e e e e [6z] * 0 [eL] [ek] L [ez] L [ek] L [G2jz] $ 6 9 9 9 9 [6z] * [fjL] 0 e [ez] [fjL] [ez] [fjL] [ez] [fjL] [H3fk] % 7 0 0 0 [0x] [6S] f * j 0 L e e e e [6S] f * j 0 L e e e e [6z] * 0 [eL] [ek] L [ez] L [ek] L [G2jz] $ 6 9 9 9 9 [6z] * [fjL] 0 e e e e [3L] % [Hfk] 7 0 [0L] [Hfk] [0L] [Hfk] [0L] [Hfk] [ej] u T u [ef] j u L T [uL] [ef] j u L T u e u T u [ef] j u L T u e u T u [ez] [uL] [Tk] [uL] [ez] [uL] [Tk] [uL] [ez] I y I e I y I [ez] L u [Tz] L u [ez] L u [Tz] L u [H0fk] u r u 0 u [rx] u [6S] f * j 0 L e e e e [6S] f * j 0 L e e e e [6z] * 0 [eL] [ek] L [ez] L [ek] L [G2jz] $ 6 9 9 9 9 [6z] * [fjL] 0 e e e e [3L] % [Hfk] 7 0 [0L] [Hfk] [0L] [Hfk] [0L] [Hfk] [S6pfj] * 0 e e e [eSL] [6pj] * 0 e e e [efx] [6pj] * 0 e e e [eSL] [6pj] * 0 e [eSL] [6pj] * 0 e [efx] [6pj] [S60epfj] [S60epfj]
 ]]
