@@ -7,24 +7,18 @@ local FinishTime = shared.ftime or 10
 
 local vs = game:GetService("VirtualUser")
 
-str = string.gsub(str, "\n", "")
-
 local nstr = string.gsub(str,"[[\]\n]","")
 
-if shared.tempo then
-    local delay = 60 / shared.tempo
-else
-    local delay = shared.delay or FinishTime / (string.len(nstr) / 1.05)
-end
+local delay = shared.tempo and (6 / shared.tempo) or shared.delay or FinishTime / (string.len(nstr) / 1.05)
 
-print("Finishing in",delay*string.length(nstr),"seconds")
+print("Finishing in",math.floor(delay*60),"minute/s",tostring(math.floor(delay*6000)):sub(2,5),"second/s")
 
 local queue = ""
 local rem = true
 
 for i=1, #str do
     if shared.stop == true then return end
-    
+
     local c = str:sub(i,i)
     
     if c == "[" then
