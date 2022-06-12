@@ -84,7 +84,7 @@ for i=1, #str do
     elseif c == " " or string.byte(c) == 10 then
         wait(delay)
         continue
-    elseif c == "|" then
+    elseif c == "|" or c == "-" then
         wait(delay*2)
         continue
     end
