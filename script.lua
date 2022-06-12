@@ -1,11 +1,11 @@
 shared.stop = true
-wait(5)
+wait(1)
 shared.stop = false
 
 local str = shared.scr or "qw[er]ty"
 local FinishTime = shared.ftime or 10
 
-local vs = game:GetService("VirtualUser")
+local vim = game:GetService("VirtualInputManager")
 
 local nstr = string.gsub(str,"[[\]\n]","")
 
@@ -29,26 +29,32 @@ for i=1, #str do
         if string.find(queue," ") then
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                vs:SetKeyDown(cc)
-                wait(delay/2)
-                vs:SetKeyUp(cc)
+                pcall(function()
+                    vim:SendKeyEvent(true, string.byte(cc), false, nil)
+                    wait(delay/2)
+                    vim:SendKeyEvent(false, string.byte(cc), false, nil)
+                end)
             end
         else
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                vs:SetKeyDown(cc)
+                pcall(function()
+                    vim:SendKeyEvent(true, string.byte(cc), false, nil)
+                end)
                 wait()
             end
             wait()
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                vs:SetKeyUp(cc)
+                pcall(function()
+                    vim:SendKeyEvent(false, string.byte(cc), false, nil)
+                end)
                 wait()
             end
         end
         queue = ""
         continue
-    elseif c == " " then
+    elseif c == " " or string.byte(c) == 10 then
         wait(delay)
         continue
     elseif c == "|" then
@@ -61,8 +67,11 @@ for i=1, #str do
         continue
     end
     
-    vs:SetKeyDown(c)
-    wait()
-    vs:SetKeyUp(c)
+    pcall(function()
+        vim:SendKeyEvent(true, string.byte(c), false, nil)
+        wait()
+        vim:SendKeyEvent(false, string.byte(c), false, nil)
+    end)
+    
     wait(delay)
 end
