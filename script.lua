@@ -2,6 +2,8 @@ shared.stop = true
 wait(1)
 shared.stop = false
 
+shared.nospacedelay = shared.nospacedelay or false
+
 local str = shared.scr or "qw[er]ty"
 local FinishTime = shared.ftime or 10
 
@@ -82,6 +84,7 @@ for i=1, #str do
         queue = ""
         continue
     elseif c == " " or string.byte(c) == 10 then
+        if shared.nospacedelay then continue end
         wait(delay)
         continue
     elseif c == "|" or c == "-" then
