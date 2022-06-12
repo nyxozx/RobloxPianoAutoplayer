@@ -13,6 +13,23 @@ local delay = shared.tempo and (6 / shared.tempo) or shared.delay or FinishTime 
 
 print("Finishing in",math.floor((delay*#nstr)/60),"minute/s",tostring(tonumber(tostring((delay*#nstr)/60):sub(3,8))*60):sub(1,2),"second/s")
 
+local shifting = false
+
+local function doshift(key)
+    if key:upper() ~= key then return end
+    if tonumber(key) then return end
+    
+    vim:SendKeyEvent(true, 304, false, nil)
+    shifting = true
+end
+
+local function endshift()
+    if not shifting then return end
+
+    vim:SendKeyEvent(false, 304, false, nil)
+    shifting = false
+end
+
 local queue = ""
 local rem = true
 
@@ -29,26 +46,32 @@ for i=1, #str do
         if string.find(queue," ") then
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                pcall(function()
-                    vim:SendKeyEvent(true, string.byte(cc), false, nil)
-                    wait(delay/2)
-                    vim:SendKeyEvent(false, string.byte(cc), false, nil)
-                end)
+             
+                doshift(cc)
+                vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
+                wait(delay/2)
+                vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
+                endshift()
+            
             end
         else
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                pcall(function()
-                    vim:SendKeyEvent(true, string.byte(cc), false, nil)
-                end)
+               
+                doshift(cc)
+                vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
+                endshift()
+               
                 wait()
             end
             wait()
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-                pcall(function()
-                    vim:SendKeyEvent(false, string.byte(cc), false, nil)
-                end)
+         
+                doshift(cc)
+                vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
+                endshift()
+  
                 wait()
             end
         end
@@ -66,12 +89,13 @@ for i=1, #str do
         queue=queue..c
         continue
     end
-    
-    pcall(function()
-        vim:SendKeyEvent(true, string.byte(c), false, nil)
-        wait()
-        vim:SendKeyEvent(false, string.byte(c), false, nil)
-    end)
+
+    doshift(c)
+    vim:SendKeyEvent(true, string.byte(c:lower()), false, nil)
+    wait()
+    vim:SendKeyEvent(false, string.byte(c:lower()), false, nil)
+    endshift()
+   
     
     wait(delay)
 end
