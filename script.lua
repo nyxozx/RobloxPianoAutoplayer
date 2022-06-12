@@ -46,31 +46,35 @@ for i=1, #str do
         if string.find(queue," ") then
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-             
-                doshift(cc)
-                vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
-                wait(delay/2)
-                vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
-                endshift()
+                pcall(function()
+                    doshift(cc)
+                    vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
+                    wait(delay/2)
+                    vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
+                    endshift()
+                end)
             
             end
         else
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
                
-                doshift(cc)
-                vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
-                endshift()
+                pcall(function()
+                    doshift(cc)
+                    vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
+                    endshift()
+                end)
                
                 wait()
             end
             wait()
             for ii=1, #queue do
                 local cc = queue:sub(ii,ii)
-         
-                doshift(cc)
-                vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
-                endshift()
+                pcall(function()
+                    doshift(cc)
+                    vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
+                    endshift()
+                end)
   
                 wait()
             end
@@ -90,11 +94,13 @@ for i=1, #str do
         continue
     end
 
-    doshift(c)
-    vim:SendKeyEvent(true, string.byte(c:lower()), false, nil)
-    wait()
-    vim:SendKeyEvent(false, string.byte(c:lower()), false, nil)
-    endshift()
+    pcall(function()
+        doshift(c)
+        vim:SendKeyEvent(true, string.byte(c:lower()), false, nil)
+        wait()
+        vim:SendKeyEvent(false, string.byte(c:lower()), false, nil)
+        endshift()
+    end)
    
     
     wait(delay)
